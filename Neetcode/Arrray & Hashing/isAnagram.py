@@ -15,3 +15,9 @@ sol = Solution()
 s = "racecar"
 t = "carrace"
 print(sol.isAnagram(s, t))
+
+'''
+Input: s = "racecar", t = "carrace"
+
+Output: true
+'''

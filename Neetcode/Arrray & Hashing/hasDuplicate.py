@@ -9,3 +9,9 @@ class Solution:
 nums = [1, 2, 3, 3]
 sol = Solution()
 print(sol.hasDuplicate(nums))
+
+'''
+Input: nums = [1, 2, 3, 3]
+
+Output: true
+'''
