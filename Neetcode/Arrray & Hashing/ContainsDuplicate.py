@@ -1,3 +1,4 @@
+'''https://neetcode.io/problems/duplicate-integer'''
 class Solution:
     def hasDuplicate(self, nums: list[int]) -> bool:
         nums.sort()
