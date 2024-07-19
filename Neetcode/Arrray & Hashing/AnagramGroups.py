@@ -7,7 +7,7 @@ class Solution:
             if key not in groups:
                 groups[key] = []
             groups[key].append(string)
-        return list(groups.values()) 
+        return list(groups.values())
 
 strs = ["act","pots","tops","cat","stop","hat"]
 sol = Solution()
