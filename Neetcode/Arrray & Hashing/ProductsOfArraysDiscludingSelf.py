@@ -1,3 +1,4 @@
+'''https://neetcode.io/problems/products-of-array-discluding-self'''
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         n = len(nums)
