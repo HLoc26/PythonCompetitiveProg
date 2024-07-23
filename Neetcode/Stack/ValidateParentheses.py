@@ -13,7 +13,3 @@ class Solution:
                 else:
                     stack.pop()
         return len(stack) == 0
-
-sol = Solution()
-s = "]"
-print(sol.isValid(s) == False)
