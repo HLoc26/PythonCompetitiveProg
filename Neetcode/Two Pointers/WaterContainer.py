@@ -11,4 +11,4 @@ class Solution:
                 i+=1
             elif heights[i] >= heights[j]:
                 j-=1
-        return res
+        return maxWater
