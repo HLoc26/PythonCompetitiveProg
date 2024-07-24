@@ -18,8 +18,7 @@ class Solution:
                     k-=1
                 else:
                     found =[nums[i], nums[j], nums[k]]
-                    if found not in res:
-                        res.append(found)
+                    res.append(found)
                     j+=1
                     k-=1
                     while j < k and nums[j] == nums[j-1]:
