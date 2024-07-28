@@ -11,7 +11,7 @@ class Solution:
         '''
         Traverse from left (i) and right (j). The condition to move pointer is if its height is lower than the other pointer.
         On every move, if the height at the new move index is higher than max_i (or max_j, depends), it means that index can't hold water.
-        Otherwise, the water it can hold is max_i/max_j - height[index] 
+        Otherwise, the water it can hold is max_i (or max j, depends) - height[index] 
         '''
         while i < j:
             if max_i < max_j:
