@@ -1,3 +1,4 @@
+'''https://hnoj.edu.vn/problem/pa008'''
 x = int(input())
 y = int(input())
 
