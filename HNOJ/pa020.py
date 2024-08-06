@@ -1,24 +1,34 @@
 '''https://hnoj.edu.vn/problem/pa020'''
-def solve_quadratic(a, b, c):
-    if a == 0:
-        if b != 0:
-            return (-c / b,)
-        elif c == 0:
-            return "Vô số nghiệm"
-        else:
-            return "Vô nghiệm"
-    
-    delta = b**2 - 4*a*c
-    if delta > 0:
-        x1 = (-b + (delta)**0.5) / (2 * a)
-        x2 = (-b - (delta)**0.5) / (2 * a)
-        return (x1, x2)
-    elif delta == 0:
-        x = -b / (2 * a)
-        return (x,)
-    else:
-        return "Vô nghiệm"
+import math
 
-# Ví dụ
-a, b, c = 1, -3, 2
-print(solve_quadratic(a, b, c))
+def solve_quadratic_equation(a, b, c):
+    # Tính delta
+    delta = b**2 - 4*a*c
+    
+    if delta > 0:
+        # Hai nghiệm phân biệt
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        return sorted([x1, x2], reverse=True)
+    elif delta == 0:
+        # Nghiệm kép
+        x = -b / (2*a)
+        return [x]
+    else:
+        # Vô nghiệm
+        return []
+
+# Đọc input
+a = float(input())
+b = float(input())
+c = float(input())
+
+# Giải phương trình
+solutions = solve_quadratic_equation(a, b, c)
+
+# In kết quả
+if len(solutions) == 0:
+    print("VO NGHIEM")
+else:
+    for x in solutions:
+        print(f"{x:.3f}")
