@@ -9,7 +9,7 @@ d = {}
 for _ in range(n):
     a, b = map(int, input().split())
     d[a] = d.get(a, 0) + 1
-    d[b] = d.get(b, 0) - 1
+    d[b+1] = d.get(b+1, 0) - 1
 points = sorted(d.keys())
 curr = 0
 ans = 0
@@ -18,7 +18,6 @@ for i in range(len(points) - 1):
     curr += d[points[i]]
     if curr == k:
         ans += points[i+1] - points[i]
-        if k == n:
-            ans += 1
+
 
 print(ans)
