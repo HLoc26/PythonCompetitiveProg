@@ -11,7 +11,7 @@ diff = [0] * (n + 1)
 # Xử lý từng lần đảo
 for ai in a:
     left, right = ai - 1, n - ai
-    diff[left] ^= 1
+    diff[left] ^= 1 # xor 1 means flip
     diff[right + 1] ^= 1
 
 # Tính prefix xor
@@ -32,23 +32,23 @@ for i in range(n):
 print(''.join(result))
 
 
-'''AC 2/25, TLE 23/25'''
-def find_odd_occurrences(arr):
-    count = {}
-    for num in arr:
-        count[num] = count.get(num, 0) + 1
+# '''AC 2/25, TLE 23/25'''
+# def find_odd_occurrences(arr):
+#     count = {}
+#     for num in arr:
+#         count[num] = count.get(num, 0) + 1
 
-    odd_occurrences = [num for num, count in count.items() if count & 1]
+#     odd_occurrences = [num for num, count in count.items() if count & 1]
     
-    return odd_occurrences
-s = input().strip()
-m = int(input())
-a = list(map(int, input().split()))
+#     return odd_occurrences
+# s = input().strip()
+# m = int(input())
+# a = list(map(int, input().split()))
 
-n = len(s)
-a = find_odd_occurrences(a)
-s = list(s)
-for i in a:
-    s[i-1:n-i+1] = s[i-1:n-i+1][::-1]
+# n = len(s)
+# a = find_odd_occurrences(a)
+# s = list(s)
+# for i in a:
+#     s[i-1:n-i+1] = s[i-1:n-i+1][::-1]
 
-print(''.join(s))
+# print(''.join(s))
