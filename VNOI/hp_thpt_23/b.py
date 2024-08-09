@@ -1,3 +1,4 @@
+'''https://oj.vnoi.info/problem/hp_thpt_23_b'''
 s = input().strip()
 count = 0
 
