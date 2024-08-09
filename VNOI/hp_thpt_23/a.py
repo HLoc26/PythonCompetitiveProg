@@ -1,3 +1,4 @@
+'''https://oj.vnoi.info/problem/hp_thpt_23_a'''
 def factor(n):
     f = {}
     i = 2
