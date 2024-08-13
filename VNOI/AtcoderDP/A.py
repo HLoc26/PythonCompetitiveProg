@@ -6,7 +6,9 @@ dp = [0] * (n)
 dp[0] = 0
 dp[1] = abs(rocks[0] - rocks[1])
 for i in range(2, n):
-    dp[i] = min(dp[i-1] + abs(rocks[i-1] - rocks[i]), dp[i-2] + abs(rocks[i-2] - rocks[i]))
+    jumpFromMinus1 = dp[i-1] + abs(rocks[i-1] - rocks[i])
+    jumpFromMinus2 = dp[i-2] + abs(rocks[i-2] - rocks[i])
+    dp[i] = min(jumpFromMinus1, jumpFromMinus2)
 
 print(dp[-1])
 
