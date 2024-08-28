@@ -1,4 +1,4 @@
-'''https://leetcode.com/problems/kth-distinct-string-in-an-array/description/'''
+'''https://leetcode.com/problems/kth-distinct-string-in-an-array/'''
 class Solution:
     def kthDistinct(self, arr: list[str], k: int) -> str:
         freq = {}
